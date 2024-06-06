@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>bennyhinn Sam - CV</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM3GoaZ4GzzHRaa5pJmrXjRSkMNGLBDFbLhD/h5" crossorigin="anonymous">
+
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+            background: #f4f4f4;
+
+            color: #333;
+
+        }
+
+        .toolbar {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 10px;
+
+            background: #333;
+
+            color: #fff;
+
+        }
+
+        .toolbar a,
+        .toolbar button {
+
+            color: #fff;
+
+            text-decoration: none;
+
+            margin: 0 10px;
+
+            cursor: pointer;
+
+        }
+
+        .toolbar button {
+
+            background: none;
+
+            border: none;
+
+        }
+
+        .cv {
+
+            display: flex;
+
+            margin: 20px;
+
+        }
+
+        .cv-body {
+
+            display: flex;
+
+            width: 100%;
+
+        }
+
+        .cv-sidebar {
+
+            width: 25%;
+
+            padding: 20px;
+
+            background: #fff;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            margin-right: 20px;
+
+        }
+
+        .cv-content {
+
+            width: 75%;
+
+            padding: 20px;
+
+            background: #fff;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .cv-header,
+        .cv-section {
+
+            margin-bottom: 20px;
+
+        }
+
+        .cv-header h1 {
+
+            margin: 0;
+
+            font-size: 24px;
+
+        }
+
+        .cv-header p {
+
+            margin: 5px 0 0;
+
+            color: #666;
+
+        }
+
+        .cv-section h2 {
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+
+        }
+
+        .cv-contact a,
+        .cv-skills p {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: #333;
+
+        }
+
+        .cv-skills p span {
+
+            font-weight: bold;
+
+        }
+
+        .cv-section ul {
+
+            padding-left: 20px;
+
+        }
+
+        .cv-section ul li {
+
+            margin-bottom: 5px;
+
+        }
+
+        .cv-skills span.cv-skills-entry--rating {
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+        .cv-skills span.cv-skills-entry--rating i {
+
+            margin-right: 5px;
+
+        }
+    </style>
+
+    <script>
+
+        function toggleDarkMode() {
+
+            const e = document.querySelector("html").classList;
+
+            e.contains("dark") ? e.remove("dark") : e.add("dark");
+
+        }
+
+        window.matchMedia("(prefers-color-scheme: dark)").matches && toggleDarkMode();
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="toolbar">
+
+        <button class="theme-toggle" onclick="toggleDarkMode()">
+
+            <span class="hide-dark"><i class="fa-solid fa-sun" aria-hidden="true"></i></span>
+
+            <span class="hide-light"><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
+
+            Toggle theme
+
+        </button>
+
+        
+
+        <div style="flex-grow:1"></div>
+
+        <a href="https://github.com/diogotcorreia/cv" target="_blank" rel="noopener noreferrer"><i
+                class="fa-brands fa-github" aria-hidden="true"></i> Source code</a>
+
+        <button class="print-button" onclick="window.print()"><i class="fa-solid fa-print"
+                aria-hidden="true"></i></button>
+
+    </div>
+
+    <main>
+
+        <div class="cv">
+
+            <div class="cv-sidebar">
+
+                <div class="cv-header">
+
+                    <h1>Bennyhinn Sam</h1>
+
+                    <p>Programming Enthusiast. Computer Science &amp; Cybersecurity Student.</p>
+
+                </div>
+
+                <div class="cv-contact">
+
+                    <h2>Contact</h2>
+
+                    <a href="mailto:bennyhinnsam18@outlook.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        me@bennyhinn</a>
+
+                    <p><i class="fa-solid fa-location-pin" aria-hidden="true"></i> Tamil Nadu, India</p>
+
+                    <!--<a href="https://diogotc.com" target="_blank"><i class="fa-solid fa-house-chimney"
+                            aria-hidden="true"></i> diogotc.com</a>-->
+
+                    <a href="https://github.com/bennyhinn18" target="_blank"><i class="fa-brands fa-github"
+                            aria-hidden="true"></i> @bennyhinn18</a>
+
+                    <a href="https://www.linkedin.com/in/bennyhinn-sam-315703216/" target="_blank"><i class="fa-brands fa-linkedin"
+                            aria-hidden="true"></i> @bennyhinn Sam</a>
+
+                </div>
+
+                <div class="cv-skills">
+
+                    <h2>Skills</h2>
+
+                    <div class="cv-skills-section">
+
+                        <h3>Programming</h3>
+
+                        <p><span>JavaScript</span> <span class="cv-skills-entry--rating"><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i></span></p>
+
+                        <p><span>Rust</span> <span class="cv-skills-entry--rating"><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__inactive"
+                                    aria-hidden="true"></i></span></p>
+
+                        <p><span>React</span> <span class="cv-skills-entry--rating"><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__inactive"
+                                    aria-hidden="true"></i></span></p>
+
+                        <p><span>NodeJS (&amp; Express)</span> <span class="cv-skills-entry--rating"><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__inactive"
+                                    aria-hidden="true"></i></span></p>
+
+                        <p><span>HTML/CSS</span> <span class="cv-skills-entry--rating"><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__inactive"
+                                    aria-hidden="true"></i></span></p>
+
+                        <p><span>Java</span> <span class="cv-skills-entry--rating"><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i></span></p>
+                    </div>
+                    <div class="cv-skills-section">
+                        <h3>Languages</h3>
+                        <p><span>Portuguese</span> <span class="cv-skills-entry--rating"><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i></span></p>
+                        <p><span>English</span> <span class="cv-skills-entry--rating"><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i></span></p>
+                        <p><span>Swedish</span> <span class="cv-skills-entry--rating"><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__inactive"
+                                    aria-hidden="true"></i><i
+                                    class="fa-solid fa-circle cv-skills-entry--rating-circle__inactive"
+                                    aria-hidden="true"></i></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-content">
+                <div class="cv-section">
+                    <h2>Summary</h2>
+                    <p>I'm a passionate computer science and cybersecurity student with a keen interest in programming
+                        and technology. I'm proficient in JavaScript, Rust, React, NodeJS, HTML/CSS, and Java. I'm
+                        fluent in Portuguese, English, and Swedish. I'm actively seeking opportunities to further
+                        develop my skills and contribute to exciting projects.</p>
+                </div>
+                <div class="cv-section">
+                    <h2>Education</h2>
+                    <ul>
+                        <li><strong>Bachelor of Science in Computer Science &amp; Cybersecurity</strong> - University of
+                            Stockholm</li>
+                        <li><strong>High School </strong> - Belfield Matriculation Higher Secondary School</li>
+                    </ul>
+                </div>
+                <div class="cv-section">
+                    <h2>Experience</h2>
+                    <ul>
+                        <li><strong>Software Developer Intern</strong> - Byte Bash Technologies</li>
+                        <li><strong>Freelance Web Developer</strong> - Various Clients</li>
+                    </ul>
+                </div>
+                <div class="cv-section">
+                    <h2>Projects</h2>
+                    <ul>
+                        <li><strong>Project A</strong> - Description of Project A</li>
+                        <li><strong>Project B</strong> - Description of Project B</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

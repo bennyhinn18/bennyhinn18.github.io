@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Bennyhinn Sam</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Nunito&amp;display=swap" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="../assets\common.css">
+    <link rel="icon" href="/assets/img/bs-logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <button id="drawer-open" class="icon-button" aria-label="Open Navigation Drawer">
+                    <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+                </button>
+                <h1><a href="#top">Bennyhinn Sam</a></h1>
+            </div>
+            <div>
+                <a class="button--big" href="/">Home</a>
+                <a class="button--big" href="/blogs">Blog</a>
+                <a class="button--big" href="/impossiblelist">Impossible List</a>
+                <a class="button--big" href="/cv">CV</a>
+            </div>
+        </nav>
+    </header>
+    <main id="top">
+        <div class="container post-list">
+            <h1>Posts</h1>
+            <div id="posts"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="container footer-sections">
+            <div class="footer-section">
+                <h2>Contact me</h2>
+                <ul>
+                    <li>
+                        <span class="social-label">Email: </span>
+                        <a href="mailto:bennyhinnsam18@gmail.com" target="_blank" rel="me noopener">me@bennyhinn</a>
+                    </li>
+                    <li>
+                        <span class="social-label">Discord: </span>
+                        <a href="https://discord.com/users/218721510649626635" target="_blank" rel="me noopener">bennyhinn18</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Site map</h2>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blogs">Blog</a></li>
+                    <li><a href="/impossiblelist">Impossible List</a></li>
+                    <li><a href="/cv">CV</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p class="copyright-text">&copy; 2024 Bennyhinn Sam</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('posts.json')
+                .then(response => response.json())
+                .then(posts => {
+                    const postsContainer = document.getElementById('posts');
+                    posts.forEach(post => {
+                        const article = document.createElement('article');
+                        article.innerHTML = `
+                            <header>
+                                <h2><a href="blog/?post=${post.url}">${post.title}</a></h2>
+                                <span>${post.date} &middot; ${post.readTime}</span>
+                            </header>
+                            <div>
+                                <p>${post.description}</p>
+                                <nav><a href="blog/?post=${post.url}">Read more&nbsp;&raquo;</a></nav>
+                            </div>
+                        `;
+                        postsContainer.appendChild(article);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

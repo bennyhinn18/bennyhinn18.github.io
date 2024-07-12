@@ -75,3 +75,47 @@
 
     
   }
+  document.addEventListener("DOMContentLoaded", () => {
+    // 
+    const navbar = document.querySelector("nav");
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].boundingClientRect.y < 0) {
+        navbar.classList.add("navbar--sticky");
+      } else {
+        navbar.classList.remove("navbar--sticky");
+      }
+    });
+    observer.observe(document.querySelector("#navbar-trigger"));
+
+    const drawer = document.getElementById("navbar-drawer");
+    const drawerOpenBtn = document.getElementById("drawer-open");
+    const drawerCloseBtn = document.getElementById("drawer-close");
+
+    drawerOpenBtn.addEventListener("click", () => {
+      drawer.showModal();
+    });
+    document.querySelectorAll("#drawer-close, #navbar-drawer a").forEach(element => {
+      element.addEventListener("click", () => {
+        drawer.close();
+      });
+    });
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.timeline-element').forEach(element => {
+    gsap.fromTo(element, 
+      { opacity: 0, y: 50 }, 
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 80%', // Trigger when the element's top is 80% from the top of the viewport
+          end: 'bottom 30%', // End when the element's bottom is 20% from the top of the viewport
+          toggleActions: 'play none none reverse'
+        }
+      }
+    );
+  });

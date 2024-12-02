@@ -64,7 +64,6 @@
         </div>
     </footer>
     <script>
-        
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const post = params.get('post');
@@ -74,12 +73,52 @@
                     .then(response => response.text())
                     .then(markdown => {
                         document.getElementById('post').innerHTML = marked.parse(markdown);
-
+                        highlightCodeBlocks();
                     });
             } else {
                 document.getElementById('post').innerHTML = '<p>Post not found.</p>';
             }
         });
+
+        function highlightCodeBlocks() {
+            document.querySelectorAll('pre code').forEach((block) => {
+                const copyButton = document.createElement('button');
+                copyButton.innerText = 'Copy';
+                copyButton.className = 'copy-button';
+                copyButton.addEventListener('click', () => {
+                    navigator.clipboard.writeText(block.innerText);
+                });
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'code-wrapper';
+                block.parentNode.insertBefore(wrapper, block);
+                wrapper.appendChild(block);
+                wrapper.appendChild(copyButton);
+            });
+        }
     </script>
+    <style>
+        .code-wrapper {
+            position: relative;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+        }
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .copy-button:hover {
+            background: #0056b3;
+        }
+    </style>
 </body>
 </html>

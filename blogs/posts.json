@@ -5,6 +5,71 @@
       "readTime": "1 minute read",
       "description": "Hello world, welcome to my little corner of the internet! This post marks the beginning of my blogging journey. You might be thinking: what will this blog be about?",
       "url": "/blogs/posts/hello.md"
+    },
+    {
+      "title": "CD Ex. No: 1",
+      "date": "Unknown Date",
+      "readTime": "1 minute read",
+      "description": "### Ex. No: 1 **Date:** ### **AIM** To develop a lexical analyzer to recognize specific patterns in C, such as **Identifiers, Constants, Comments, Operators, etc.,** and to implement a symbol table.",
+      "url": "/blogs/posts/cdlab-1.md"
+    },
+    {
+      "title": "CD Ex. No: 2.a",
+      "date": "Unknown Date",
+      "readTime": "1 minute read",
+      "description": "### Ex. No: 2.a ### **AIM** ### **ALGORITHM** ### **PROGRAM** ### **Output** ### **CONCLUSION**",
+      "url": "/blogs/posts/cdlab-2a.md"
+    },
+    {
+      "title": "CD Ex. No: 2.b",
+      "date": "Unknown Date",
+      "readTime": "1 minute read",
+      "description": "### Ex. No: 2.b ### **AIM** ### **ALGORITHM** ### **PROGRAM** ### **Output** ### **CONCLUSION**",
+      "url": "/blogs/posts/cdlab-2b.md"
+    },
+    {
+      "title": "CD Ex. No: 3.a",
+      "date": "Unknown Date",
+      "readTime": "1 minute read",
+      "description": "### Ex. No: 3 ### **AIM** ### **ALGORITHM** ### **PROGRAM** ### **Output** ### **CONCLUSION**",
+      "url": "/blogs/posts/cdlab-3a.md"
+    },
+    {
+      "title": "CD Ex. No: 3.b",
+      "date": "Unknown Date",
+      "readTime": "1 minute read",
+      "description": "### Ex. No: 3 ### **AIM** ### **ALGORITHM** ### **PROGRAM** ### **Output** ### **CONCLUSION**",
+      "url": "/blogs/posts/cdlab-3b.md"
+    },
+    {
+      "title": "CD Ex. No: 4",
+      "date": "Unknown Date",
+      "readTime": "1 minute read",
+      "description": "### Ex. No: 4 ### **AIM** ### **ALGORITHM** ### **PROGRAM** ### **Output** ### **CONCLUSION**",
+      "url": "/blogs/posts/cdlab-4.md"
+    },
+    {
+      "title": "CD Ex. No: 5",
+      "date": "Unknown Date",
+      "readTime": "1 minute read",
+      "description": "### Ex. No: 5 ### **AIM** ### **ALGORITHM** ### **PROGRAM** ### **Output** ### **CONCLUSION**",
+      "url": "/blogs/posts/cdlab-5.md"
+    },
+    {
+      "title": "CD Ex. No: 6",
+      "date": "Unknown Date",
+      "readTime": "1 minute read",
+      "description": "### Ex. No: 6 ### **AIM** ### **ALGORITHM** ### **PROGRAM** ### **Output** ### **CONCLUSION**",
+      "url": "/blogs/posts/cdlab-6.md"
+    },
+    {
+      "title": "CD Ex. No: 7",
+      "date": "Unknown Date",
+      "readTime": "1 minute read",
+      "description": "### Ex. No: 7 ### **AIM** ### **ALGORITHM** ### **PROGRAM** ### **Output** ### **CONCLUSION**",
+      "url": "/blogs/posts/cdlab-7.md"
     }
+
+
   ]
   
